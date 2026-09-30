@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block title %}Plants{% endblock %}
+{% block content %}
+<h1>All plants</h1>
+<div class="grid">{% for p in plants %}{% include "_card.html" %}{% endfor %}</div>
+{% endblock %}

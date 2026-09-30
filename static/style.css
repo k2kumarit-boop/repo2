@@ -1,0 +1,28 @@
+:root{--bg:#eef2ea;--ink:#16261e;--green:#1f3a2e;--gold:#f2b632;--card:#fff;--line:#cfd8c8}
+@media (prefers-color-scheme:dark){:root{--bg:#101a15;--ink:#e6eee2;--green:#7fb08f;--card:#182620;--line:#2c4136}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.6 Georgia,"Times New Roman",serif}
+main,.bar,.foot{max-width:64rem;margin:0 auto;padding:1.25rem}
+.bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.logo{font-size:1.5rem;font-weight:bold;color:var(--green);text-decoration:none}
+.nav a{margin-left:1.25rem;color:var(--ink);text-decoration:none}
+.nav a:hover,.nav a:focus-visible{text-decoration:underline}
+.nav-toggle{position:absolute;opacity:0}
+.burger{display:none;cursor:pointer;border:1px solid var(--line);padding:.35rem .8rem;border-radius:.4rem}
+.hero{padding:3rem 0 2rem;max-width:40rem}
+h1{font-size:clamp(2rem,6vw,3.5rem);line-height:1.1;margin:0 0 1rem;color:var(--green)}
+.btn{display:inline-block;background:var(--gold);color:#16261e;border:0;padding:.7rem 1.4rem;border-radius:.4rem;font:inherit;font-weight:bold;text-decoration:none;cursor:pointer}
+.btn:focus-visible,input:focus-visible,textarea:focus-visible,.burger:focus-within{outline:3px solid var(--green);outline-offset:2px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:1.1rem}
+.card h3{margin:0}.price{font-weight:bold;color:var(--green)}.care{font-size:.9rem;opacity:.8}
+.form{display:grid;gap:.5rem;max-width:32rem}
+input,textarea{font:inherit;padding:.6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);color:var(--ink)}
+.flash{padding:.7rem 1rem;border-radius:.4rem}.flash.ok{background:#d6ecd2;color:#16261e}.flash.error{background:#f7d9d4;color:#4a1710}
+.foot{border-top:1px solid var(--line);margin-top:2rem;font-size:.9rem}
+@media (max-width:40rem){
+  .burger{display:inline-block}
+  .nav{display:none;width:100%;padding-top:.5rem}
+  .nav a{display:block;margin:0;padding:.6rem 0;border-top:1px solid var(--line)}
+  .nav-toggle:checked ~ .nav{display:block}
+}

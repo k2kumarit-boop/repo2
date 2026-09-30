@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <h1>Plants that survive your busy week.</h1>
+  <p>Hardy houseplants, sorted by how much light your room gets and how often you remember to water.</p>
+  <a class="btn" href="{{ url_for('plants') }}">Browse plants</a>
+</section>
+<section>
+  <h2>Easy starters</h2>
+  <div class="grid">{% for p in plants %}{% include "_card.html" %}{% endfor %}</div>
+</section>
+{% endblock %}
